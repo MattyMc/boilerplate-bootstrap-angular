@@ -1,0 +1,35 @@
+<div class="container extra-margin-top">
+
+  <div class="text-center">
+    <h1>Time to start COOKIN'!</h1>
+    <p class="lead">Lets get started Matty. What are you waiting for??!<br> I know you got some fun little idea planned, so you start cookin' it up boyyyyyyy!</p>
+  </div>
+
+  <div ng-controller="SimpleController">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <h3>{{ sayHello }}</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-8 col-xs-offset-2">
+        <table class="table">
+          <thead>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Description</th>
+          </thead>
+
+          <tr ng-repeat="phone in phones | orderBy: '-date'">
+            <td>{{phone.name}}</td>
+            <td>{{phone.date | date:"MMM dd, yyyy" }}</td>
+            <td>{{phone.snippet}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+</div><!-- /.container -->
